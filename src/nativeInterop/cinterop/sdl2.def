@@ -1,0 +1,9 @@
+package = platform.SDL2
+headers = SDL2/SDL.h
+entryPoint = SDL_main
+
+compilerOpts = -D_POSIX_SOURCE
+compilerOpts.osx = -I/opt/homebrew/include -I/opt/homebrew/include/SDL2
+compilerOpts.linux = -I/usr/include -I/usr/include/x86_64-linux-gnu
+linkerOpts.osx = -L/opt/homebrew/lib -lSDL2
+linkerOpts.linux = -L/usr/lib/x86_64-linux-gnu -lSDL2
